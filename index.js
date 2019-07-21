@@ -48,6 +48,9 @@ const app = express();
 const server = new ApolloServer({
   typeDefs,
   resolvers,
+  playground: {
+    settings: {}
+  },
   introspection: true
 });
 
