@@ -1,0 +1,21 @@
+# import Post from "posts.graphql"
+
+type Query {
+    posts: [Post]
+    test: String
+    post: Post
+}
+
+type Mutation {
+    createPost(post: PostInput!): Post!
+    updatePost(id: ID!, post: PostInput!): Post!
+}
+
+type Subscription {
+    postAdded: Post
+}
+
+
+input PostInput {
+    text: String!
+}
