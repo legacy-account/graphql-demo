@@ -1,21 +1,15 @@
-# import Post from "posts.graphql"
+# import Book from "book.graphql"
 
 type Query {
-    posts: [Post]
-    test: String
-    post: Post
+    books(id: ID): [Book]
+    authors(id: ID): [Author]
 }
 
 type Mutation {
-    createPost(post: PostInput!): Post!
-    updatePost(id: ID!, post: PostInput!): Post!
+    createBook(book: BookInput!): Book!
+    updateBook(id: ID!, book: BookInput!): Book!
 }
 
 type Subscription {
-    postAdded: Post
-}
-
-
-input PostInput {
-    text: String!
+    bookAdded: Book
 }

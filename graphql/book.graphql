@@ -1,0 +1,20 @@
+# import Author from 'author.graphql'
+
+type Book {
+    id: ID!
+    title: String
+    published: Date
+    author: Author
+    price: String
+    numberOfPages: Int
+}
+
+input BookInput {
+    authorId: ID!
+    title: String!
+    published: Date
+    price: String
+    numberOfPages: Int
+}
+
+scalar Date
