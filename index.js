@@ -48,11 +48,7 @@ const app = express();
 const server = new ApolloServer({
   typeDefs,
   resolvers,
-  playground: {
-    settings: {
-      // "editor.theme": 'light'
-    }
-  }
+  introspection: true
 });
 
 server.applyMiddleware({ app })
